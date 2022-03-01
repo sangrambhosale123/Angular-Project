@@ -1,0 +1,41 @@
+
+<form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <div class="background">
+        <div class="register">
+            <div class="head"><h1>Patient Signup</h1></div>
+    <div class="form-group">
+        <input id="name" type="text" required #name = "ngModel" class="text" name="p_name" placeholder="Name" ngModel>
+        <span *ngIf = "name.invalid && name.touched" style="color: red;">Please Enter Name</span>
+    </div>
+    <div class="form-group">
+        <input id="dob" type="date" required #dob = "ngModel" class="text" name="dob" placeholder="Date Of Birth" ngModel>
+        <span *ngIf = "dob.invalid && dob.touched" style="color: red;">Please Enter Date of Birth</span>
+    </div>
+    <div class="form-group">
+        <input id="username" type="text" required #username = "ngModel" class="text" name="p_username" placeholder="UserName" ngModel>
+        <span *ngIf = "username.invalid && username.touched" style="color: red;">Please Enter UserName</span>
+    </div>
+    <div class="form-group">
+        <input id="password" type="password" minlength="2" required #password = "ngModel" class="text" name="p_password" placeholder="••••••••••••••" ngModel>
+        <span *ngIf = "password.invalid && password.touched" style="color: red;">Please Enter Password</span>
+    </div>
+    <div class="form-group">
+        <label class="a" for="gedner">Select gender</label>
+        <select name="p_gender" id="gender" required #gender = "ngModel"  ngModel>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <span *ngIf = "gender.invalid && gender.touched" style="color: red;">Please Select Gender</span>
+      </div>
+    <div class="form-group">
+        <input id="contactNo" type="number" required #number = "ngModel" class="text" name="p_contact_no" placeholder="Contact No" ngModel>
+        <span *ngIf = "number.invalid && number.touched" style="color: red;">Please Enter Number</span>
+    </div>
+    <div class="button">
+        <button [disabled] = "f.invalid" type="submit" class="btn-register">Sign Up</button>
+    </div>
+        </div>
+
+    </div>
+</form>

@@ -1,0 +1,82 @@
+img {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+    opacity: 1;
+  }
+  .content {
+    position: relative;
+  }
+  .PART1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 20px;
+    margin: 20px 50px;
+    z-index: 150;
+    display: block;
+  }
+  .knowmore {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .knowmore a {
+    text-decoration: none;
+    color: black;
+  }
+  .course {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  .course-item1 {
+    width: 35%;
+    height: 200px;
+    margin: 20px 20px;
+    background-color: #7fffd47a;
+    padding: 20px 20px;
+    border-radius: 30px;
+  }
+  .course-item1 a {
+    color: blue;
+  }
+  .course-item2 {
+    width: 35%;
+    margin: 20px 20px;
+    background-color: #7fffd47a;
+    padding: 20px 20px;
+    border-radius: 30px;
+  }
+  .course-item2 a {
+    color: blue;
+  }
+  .frontimg {
+    width: 100%;
+    height: 590px;
+    background-image: url("https://media.istockphoto.com/photos/close-up-of-doctor-is-touching-digital-virtual-screen-for-analytics-picture-id1273886962?b=1&k=20&m=1273886962&s=170667a&w=0&h=f9FyAVFdXEwAv7qdEFWbdfLoqa7z87rwyKsd9iqrjBw=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+  }
+  .fheading {
+    width: 500px;
+    height: 100px;
+    margin: 50px 50px;
+    font-family: cursive;
+  }
+  .knowmore a {
+    border: 1px solid black;
+    background-color: #4c68af;
+    margin: 5px 5px;
+    padding: 6px 6px;
+    border-radius: 25px;
+    color: white;
+  }
+  .course-item {
+    margin: 10px 0;
+  }
+  

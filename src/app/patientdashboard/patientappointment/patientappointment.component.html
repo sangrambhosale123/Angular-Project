@@ -1,0 +1,45 @@
+
+<form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <div class="background">
+        <div class="register">
+            <div class="head"><h1>Book Appointment</h1></div>
+    <div class="form-group">
+        <input id="name" type="text" class="text" name="p_name" placeholder="Name" ngModel required #p_name = "ngModel">
+        <span *ngIf = "p_name.invalid && p_name.touched" style="color: red;">Please Enter Name</span>
+    </div>
+    <div class="form-group">
+        <input id="date" type="date" class="text" name="ap_date" placeholder="Enter Date" ngModel required #date = "ngModel">
+        <span *ngIf = "date.invalid && date.touched" style="color: red;">Please Enter Date</span>
+    </div>
+    <div class="form-group">
+        <input id="city" type="text" class="text" name="city" placeholder="Enter city" ngModel required #city = "ngModel">
+        <span *ngIf = "city.invalid && city.touched" style="color: red;">Please Enter City</span>
+    </div>
+    <div class="form-group">
+        <input id="symptom" type="text" class="text" name="symptom" placeholder="Enter symptom" ngModel required #symptom = "ngModel">
+        <span *ngIf = "symptom.invalid && symptom.touched" style="color: red;">Please Enter Symptom</span>
+    </div>
+    <div class="form-group">
+        <label class="a" for="gedner">Select gender</label>
+        <select name="gender" id="gender" ngModel required #gender = "ngModel">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <span *ngIf = "gender.invalid && gender.touched" style="color: red;">Please Select Gender</span>
+    </div>
+      <div class="form-group">
+        <label class="a" for="time">Select time</label>
+        <select name="ap_time" id="time" ngModel required #time = "ngModel">
+            <option value="9am-12pm">9am-12pm</option>
+            <option value="12pm-3pm">12pm-3pm</option>
+            <option value="3pm-6pm">3pm-6pm</option>
+        </select>
+        <span *ngIf = "time.invalid && time.touched" style="color: red;">Please Select Time</span>
+    </div>
+    <div class="button">
+        <button [disabled] = "f.invalid" type="submit" class="btn-register">Book</button>
+    </div>
+        </div>
+    </div>
+</form>

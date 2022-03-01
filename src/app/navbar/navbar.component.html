@@ -1,0 +1,29 @@
+<nav class="navbar">
+    <ul class="navbar-items">
+        <li class="navbar-item">
+            <a routerLink="/" routerLinkActive = "active">Hospital Management</a>
+        </li>
+        <li class="navbar-item">
+            <a routerLink="Admin" routerLinkActive = "active" *ngIf = "status!== 'active' ">Admin</a>
+        </li>
+        <li class="navbar-item">
+            <a routerLink="Doctor" routerLinkActive = "active" *ngIf = "status!== 'active' ">Doctor</a>
+        </li>
+        <li class="navbar-item">
+            <a routerLink="Patient" routerLinkActive = "active" *ngIf = "status!== 'active' ">Patient</a>
+        </li>
+        <li class="navbar-item">
+            <a routerLink="AboutUs" routerLinkActive = "active" *ngIf = "status!== 'active' ">About Us</a>
+        </li>
+        <li class="navbar-item-logout">
+            <a routerLink="Logout" routerLinkActive = "active" *ngIf = "status == 'active' ">Log Out</a>
+        </li>
+    </ul>
+</nav>
+<div id="sidebar" *ngIf = "status == 'active'">
+    <ul id="sidebar-items">
+        <li id="sidebar-item"><a routerLink="PatientAppointment" routerLinkActive = "active" *ngIf = "status == 'active'">Appointment</a></li>
+        <li id="sidebar-item"><a routerLink="ViewDoctor" routerLinkActive = "active" *ngIf = "status == 'active'">View Doctor</a></li>
+        <li id="sidebar-item"><a routerLink="Invoice" routerLinkActive = "active" *ngIf = "status == 'active'">Invoice</a></li>
+    </ul>
+</div>

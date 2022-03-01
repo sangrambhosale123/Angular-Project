@@ -1,0 +1,35 @@
+
+<form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <div class="background">
+        <div class="register">
+            <div class="head"><h1>Doctor Signup</h1></div>
+    <div class="form-group">
+        <input id="name" type="text" class="text" name="d_name" placeholder="Name" ngModel>
+    </div>
+    <div class="form-group">
+        <input id="password" type="password" class="text" name="d_password" placeholder="••••••••••••••" ngModel>
+    </div>
+    <div class="form-group">
+        <label class="a" for="gedner">Select gender</label>
+        <select name="d_gender" id="gender" ngModel>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input id="email" type="text" class="text" name="d_username" placeholder="UserName" ngModel>
+    </div>
+    <div class="form-group">
+        <input id="contactNo" type="number" class="text" name="d_contact_no" placeholder="Contact No" ngModel>
+    </div>
+    <div class="form-group">
+        <input id="specialty" type="text" class="text" name="specilisation" placeholder="Specilisation" ngModel>
+    </div>
+    <div class="button">
+        <input type="submit" value="Signup" class="btn-register">
+    </div>
+        </div>
+
+    </div>
+</form>
